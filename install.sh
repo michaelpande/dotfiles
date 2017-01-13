@@ -11,6 +11,6 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 # Vim setup
 rm -rf ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
+wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -P ~/.vim/colors/
 
 vim +PluginInstall +qall

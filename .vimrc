@@ -6,24 +6,21 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tyrannicaltoucan/vim-quantum'
-Plugin 'kien/ctrlp.vim'
-
+Bundle 'VundleVim/Vundle.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
+Bundle 'airblade/vim-gitgutter'
 
 
 " All of your Plugins must be added before the following two lines
 call vundle#end()            
 filetype plugin indent on    
 
-set background=dark
-colorscheme quantum
-
-if has("termguicolors")
-    set termguicolors
-endif
-
-
+set laststatus=2
+syntax on
+colorscheme molokai
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
