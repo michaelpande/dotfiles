@@ -2,7 +2,7 @@
 
 # Remove and symlink dotfile
 rm -f ~/.vimrc
-rm -f ~/.alias.zsh
+rm -f ~/.oh-my-zsh/custom/alias.zsh
 
 
 ln -s ~/dotfiles/.vimrc ~/.vimrc
