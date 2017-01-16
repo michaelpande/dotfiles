@@ -1,6 +1,7 @@
 alias v='vim'
 alias dcc='docker-compose'
 alias dcup='docker-compose up -d'
+alias please='sudo'
 
 function f(){
  firefox $1 &
