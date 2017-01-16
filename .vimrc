@@ -29,3 +29,8 @@ set relativenumber
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/node_modules,*/tmp
+
+let mapleader = ","
+nmap <leader>n :NERDTreeToggle<cr>
+
+

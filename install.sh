@@ -3,10 +3,11 @@
 # Remove and symlink dotfile
 rm -f ~/.vimrc
 rm -f ~/.oh-my-zsh/custom/alias.zsh
-
+rm -f ~/.Xmodmap
 
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/alias.zsh ~/.oh-my-zsh/custom/alias.zsh
+ln -s ~/dotfiles/.Xmodmap ~/.Xmodmap
 
 
 # Vim setup
