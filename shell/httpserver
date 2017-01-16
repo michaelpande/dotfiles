@@ -1,0 +1,24 @@
+function server(){ 
+
+	# Run webserver with ruby if installed
+	if [ $(dpkg-query -W -f='${Status}' ruby 2>/dev/null | grep -c "ok installed") -eq 1 ];
+	then
+		ruby -run -ehttpd . -p8000
+	fi
+
+	# Run webserver with PHP if installed
+	if [ $(dpkg-query -W -f='${Status}' php 2>/dev/null | grep -c "ok installed") -eq 1 ];
+	then
+		php -S localhost:8000
+	fi
+
+	echo "No simple http server environment installed, install ruby or php"
+	
+	# Run browser-sync if installed
+	if [ $(dpkg-query -W -f='${Status}' browser-sync 2>/dev/null | grep -c "ok installed") -eq 1 ];
+	then
+		browser-sync start --proxy "http://localhost:8000" --files "**/*.html" "**/*.scss" "**/*.js"
+	fi
+
+
+}
