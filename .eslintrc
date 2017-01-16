@@ -7,6 +7,17 @@
 
 	"rules": {
 		"quotes": [1, "single", "avoid-escape"],
-		'no-param-reassign': ['error', { props: true }]
+		"no-param-reassign": ["error", { props: true }],
+		"no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
+		"eqeqeq": ["error", "always"],
+		"spaced-comment": ["error", "always"],
+		"semi": ["error", "always"],
+		"id-length": ["warn", {"min": 4}],
+		"no-console": ["warn", { allow: ["warn, "error"]}],
+		"no-array-constructor": "error",
+		"no-new-object": "error",
+		"dot-notationm": "error",
+		"eol-last": ["error", "always"],
+		"max-len": ["warn", 100]
 	}
 }
