@@ -13,6 +13,8 @@ Bundle 'bling/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'mattn/emmet-vim'
+Bundle 'chrisbra/colorizer'
+
 
 " All of your Plugins must be added before the following two lines
 call vundle#end()            
