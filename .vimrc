@@ -34,5 +34,6 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/node_
 
 let mapleader = ","
 nmap <leader>n :NERDTreeToggle<cr>
-
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
 
