@@ -5,10 +5,15 @@ rm -f ~/.vimrc
 rm -f ~/.oh-my-zsh/custom/shell.zsh
 rm -f ~/.Xmodmap
 rm -f ~/.gitignore
+rm -rf ~/.i3
 
-# Symlin
+# Make necessary folders
+mkdir ~/.i3
+
+# Symlink
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.Xmodmap ~/.Xmodmap
+ln -s ~/dotfiles/desktop/.i3/config ~/.i3/config
 
 
 # Vim setup
