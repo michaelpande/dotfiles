@@ -6,6 +6,7 @@ rm -f ~/.oh-my-zsh/custom/shell.zsh
 rm -f ~/.Xmodmap
 rm -f ~/.gitignore
 rm -rf ~/.i3
+rm -f ~/.i3status.conf
 
 # Make necessary folders
 mkdir ~/.i3
@@ -14,7 +15,7 @@ mkdir ~/.i3
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.Xmodmap ~/.Xmodmap
 ln -s ~/dotfiles/desktop/.i3/config ~/.i3/config
-
+ln -s ~/dotfiles/desktop/.i3/i3status.conf ~/.i3status.conf
 
 # Vim setup
 rm -rf ~/.vim
