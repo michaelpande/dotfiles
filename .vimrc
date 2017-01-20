@@ -14,17 +14,23 @@ Bundle 'mattn/emmet-vim'
 Bundle 'chrisbra/colorizer'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'gabesoft/vim-ags'
+Bundle 'nanotech/jellybeans.vim'
 
 call vundle#end()            
 filetype plugin indent on    
 
 set laststatus=2
 syntax on
-colorscheme molokai
+
+colorscheme jellybeans
 
 set tabstop=4
 set shiftwidth=4
 set relativenumber
+set cursorline
+set cursorcolumn
+highlight CursorLine ctermbg=236 ctermfg=white
+highlight CursorColumn ctermbg=235
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
