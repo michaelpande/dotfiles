@@ -1,11 +1,9 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
 Bundle 'VundleVim/Vundle.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
@@ -17,7 +15,6 @@ Bundle 'chrisbra/colorizer'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'gabesoft/vim-ags'
 
-" All of your Plugins must be added before the following two lines
 call vundle#end()            
 filetype plugin indent on    
 
@@ -38,3 +35,7 @@ nmap <leader>n :NERDTreeToggle<cr>
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
