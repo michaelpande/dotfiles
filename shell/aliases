@@ -1,9 +1,0 @@
-alias v='vim'
-alias dcc='docker-compose'
-alias dcu='docker-compose up -d'
-alias dcl='docker-compose logs'
-alias please='sudo'
-
-function f(){
- firefox $1 &
-}
