@@ -9,7 +9,7 @@ rm -f ~/.i3status.conf
 rm -f ~/.zshrc
 rm -rf ~/.antigen
 rm -rf ~/.local/share/radiotray/bookmarks.xml
-
+rm -rf ~/.workrave/state
 
 # Make necessary folders
 mkdir ~/.i3
@@ -25,7 +25,7 @@ ln -s ~/dotfiles/.Xmodmap ~/.Xmodmap
 ln -s ~/dotfiles/desktop/.i3/config ~/.i3/config
 ln -s ~/dotfiles/desktop/.i3/i3status.conf ~/.i3status.conf
 ln -s ~/dotfiles/etc/bookmarks.xml ~/.local/share/radiotray/bookmarks.xml
-
+ln -s ~/dotfiles/etc/workrave/state ~/.workrave/state
 
 # Vim setup
 rm -rf ~/.vim
