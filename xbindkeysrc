@@ -1,0 +1,11 @@
+"i3lock -c 395c69 -i ~/images/lockscreen.png"
+  Pause
+
+"amixer -q set Master 5dB+ unmute"
+  XF86AudioRaiseVolume
+
+"amixer -q set Master 5dB- unmute"
+  XF86AudioLowerVolume
+
+"amixer -q set Master toggle"
+  XF86AudioMute

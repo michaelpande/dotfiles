@@ -1,0 +1,5 @@
+clear Lock
+keysym Caps_Lock = Escape
+keycode 121 = XF86AudioMute
+keycode 122 = XF86AudioLowerVolume
+keycode 123 = XF86AudioRaiseVolume
