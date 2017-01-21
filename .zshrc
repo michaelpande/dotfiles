@@ -29,8 +29,9 @@ function f(){
  }
 
  
- # Options 
- setopt HIST_IGNORE_ALL_DUPS
+# Options 
+setopt HIST_IGNORE_ALL_DUPS
 
- # Global gitignore
- git config --global core.excludesfile '~/.gitignore'
+# Global gitignore
+git config --global core.excludesfile '~/.gitignore'
+
