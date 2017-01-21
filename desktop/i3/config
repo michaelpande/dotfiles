@@ -172,10 +172,10 @@ focus_follows_mouse no
 hide_edge_borders both
 
 # Lock screen with i3lock, use image if found else use color #395c69
-bindsym Pause exec i3lock -c 395c69 -i ~/images/lockscreen.png
+#bindsym Pause exec i3lock -c 395c69 -i ~/images/lockscreen.png
 
 # Media keys
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+#bindsym XF86AudioMute exec amixer -q set Master toggle
 

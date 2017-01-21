@@ -9,3 +9,5 @@
 
 "amixer -q set Master toggle"
   XF86AudioMute
+
+
