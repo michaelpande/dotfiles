@@ -93,10 +93,10 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1 misc
+bindsym $mod+1 workspace 1 www
 bindsym $mod+2 workspace 2 term
 bindsym $mod+3 workspace 3 term
-bindsym $mod+4 workspace 4 www
+bindsym $mod+4 workspace 4 misc
 bindsym $mod+5 workspace 5 misc
 bindsym $mod+6 workspace 6 misc
 bindsym $mod+7 workspace 7 misc
@@ -105,10 +105,10 @@ bindsym $mod+9 workspace 9 misc
 bindsym $mod+0 workspace 10 social
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1 misc
+bindsym $mod+Shift+1 move container to workspace 1 www
 bindsym $mod+Shift+2 move container to workspace 2 term
 bindsym $mod+Shift+3 move container to workspace 3 term
-bindsym $mod+Shift+4 move container to workspace 4 www
+bindsym $mod+Shift+4 move container to workspace 4 misc
 bindsym $mod+Shift+5 move container to workspace 5 misc
 bindsym $mod+Shift+6 move container to workspace 6 misc
 bindsym $mod+Shift+7 move container to workspace 7 misc
@@ -170,12 +170,4 @@ focus_follows_mouse no
 
 # Only show borders between tiles, and don't show borders on the end of the screen
 hide_edge_borders both
-
-# Lock screen with i3lock, use image if found else use color #395c69
-#bindsym Pause exec i3lock -c 395c69 -i ~/images/lockscreen.png
-
-# Media keys
-#bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-#bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-#bindsym XF86AudioMute exec amixer -q set Master toggle
 

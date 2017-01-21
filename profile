@@ -21,4 +21,4 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 xmodmap ~/.Xmodmap
 xbindkeys
 workrave &
-
+nohup radiotray > /dev/null &
