@@ -10,4 +10,5 @@
 "amixer -q set Master toggle"
   XF86AudioMute
 
-
+"gnome-session quit"
+  super + shift + e
