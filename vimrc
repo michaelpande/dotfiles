@@ -15,6 +15,8 @@ Bundle 'chrisbra/colorizer'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'gabesoft/vim-ags'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'ciaranm/detectindent'
+Bundle 'easymotion/vim-easymotion'
 
 call vundle#end()            
 filetype plugin indent on    

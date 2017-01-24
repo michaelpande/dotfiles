@@ -18,7 +18,7 @@ fi
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-xmodmap ~/.Xmodmap
 xbindkeys
-workrave &
+workrave &xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap
 nohup radiotray > /dev/null &
