@@ -31,6 +31,7 @@ set shiftwidth=4
 set relativenumber
 set cursorline
 set cursorcolumn
+set clipboard=unnamedplus
 highlight CursorLine ctermbg=236 ctermfg=white
 highlight CursorColumn ctermbg=235
 
