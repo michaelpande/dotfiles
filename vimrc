@@ -17,6 +17,7 @@ Bundle 'gabesoft/vim-ags'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'ciaranm/detectindent'
 Bundle 'easymotion/vim-easymotion'
+Bundle 'kabbamine/zeavim.vim'
 
 call vundle#end()            
 filetype plugin indent on    
