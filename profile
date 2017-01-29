@@ -23,8 +23,5 @@ xbindkeys
 workrave &
 nohup radiotray > /dev/null &
 
-if [ -d "$HOME/dev/toolbelt" ] ; then
-	PATH="$PATH:$HOME/dev/toolbelt"
-fi
 # Key repeat
 xset r rate 250 40 
