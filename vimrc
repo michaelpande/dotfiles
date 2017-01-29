@@ -15,6 +15,9 @@ Bundle 'chrisbra/colorizer'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'gabesoft/vim-ags'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'ciaranm/detectindent'
+Bundle 'easymotion/vim-easymotion'
+Bundle 'kabbamine/zeavim.vim'
 
 call vundle#end()            
 filetype plugin indent on    
@@ -29,6 +32,7 @@ set shiftwidth=4
 set relativenumber
 set cursorline
 set cursorcolumn
+set clipboard=unnamedplus
 highlight CursorLine ctermbg=236 ctermfg=white
 highlight CursorColumn ctermbg=235
 
