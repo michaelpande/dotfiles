@@ -33,6 +33,7 @@ set relativenumber
 set cursorline
 set cursorcolumn
 set clipboard=unnamedplus
+set virtualedit=onemore
 highlight CursorLine ctermbg=236 ctermfg=white
 highlight CursorColumn ctermbg=235
 
