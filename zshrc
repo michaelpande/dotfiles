@@ -35,10 +35,5 @@ setopt HIST_IGNORE_ALL_DUPS
 # Global gitignore
 git config --global core.excludesfile '~/.gitignore'
 
-if [ -d "$HOME/dev/toolbelt" ] ; then
-	PATH="$PATH:$HOME/dev/toolbelt"
-fi
-
-
 
 
