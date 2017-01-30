@@ -17,14 +17,13 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$HOME/dev/toolbelt:$HOME/tools/dev:$PATH"
 xmodmap ~/.Xmodmap
 xbindkeys
 workrave &
 nohup radiotray > /dev/null &
 
-PATH="$PATH:$HOME/dev/toolbelt"
-PATH="$PATH:$HOME/tools/dev"
-
 # Key repeat
 xset r rate 250 40 
+
+git config --global core.excludesfile '~/.gitignore'
