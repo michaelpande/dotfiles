@@ -32,4 +32,4 @@ xset -dpms
 # Autolock
 exec xautolock -time 15 -locker "i3lock -c 395c69 -i ~/images/lockscreen.png" &
 
-git config --global core.excludesfile '~/.gitignore'
+git config --global core.excludesfile '$HOME/.gitignore'
