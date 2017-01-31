@@ -26,4 +26,10 @@ nohup radiotray > /dev/null &
 # Key repeat
 xset r rate 250 40 
 
+# Turn off power saving (Dark screen)
+xset -dpms 
+
+# Autolock
+exec xautolock -time 15 -locker "i3lock -c 395c69 -i ~/images/lockscreen.png" &
+
 git config --global core.excludesfile '~/.gitignore'

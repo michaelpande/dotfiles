@@ -1,4 +1,4 @@
-https://github.com/github/gitignore/blob/master/Rails.gitignore
+# https://github.com/github/gitignore/blob/master/Rails.gitignore
 
 *.rbc
 capybara-*.html

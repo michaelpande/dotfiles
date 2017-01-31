@@ -1,4 +1,4 @@
-https://github.com/github/gitignore/blob/master/Sass.gitignore
+# https://github.com/github/gitignore/blob/master/Sass.gitignore
 
 .sass-cache/
 *.css.map
