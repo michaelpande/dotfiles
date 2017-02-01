@@ -13,6 +13,7 @@ rm -rf ~/.workrave/state
 rm -rf ~/.config/redshift.conf
 rm -rf ~/.xbindkeysrc
 rm -rf ~/.profile
+rm -rf ~/.gitconfig
 
 # Make necessary folders
 mkdir ~/.i3
@@ -32,6 +33,7 @@ ln -s ~/dotfiles/etc/workrave/state ~/.workrave/state
 ln -s ~/dotfiles/etc/redshift.conf ~/.config/redshift.conf 
 ln -s ~/dotfiles/xbindkeysrc ~/.xbindkeysrc
 ln -s ~/dotfiles/profile ~/.profile
+ln -s ~/dotfiles/gitconfig ~/.gitconfig
 
 # Vim setup
 rm -rf ~/.vim

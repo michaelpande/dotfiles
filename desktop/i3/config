@@ -171,3 +171,5 @@ focus_follows_mouse no
 # Only show borders between tiles, and don't show borders on the end of the screen
 hide_edge_borders both
 
+#Network Manager
+exec --no-startup-id nm-applet

@@ -29,11 +29,15 @@ colorscheme jellybeans
 
 set tabstop=2
 set shiftwidth=2
+set expandtab
+set encoding=utf-8
 set relativenumber
 set cursorline
 set cursorcolumn
 set clipboard=unnamedplus
 set virtualedit=onemore
+set nobackup
+set nowritebackup
 highlight CursorLine ctermbg=236 ctermfg=white
 highlight CursorColumn ctermbg=235
 

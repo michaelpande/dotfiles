@@ -1,0 +1,8 @@
+[user]
+	email = michaelpande@gmail.com
+	name = Michael Pande
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim

@@ -2,8 +2,7 @@
   Pause
 
 "gnome-session quit"
-  super + shift + e
-
+  Mod4 + Super_L + shift + e
 
 "amixer -q set Master 5dB+ unmute"
   XF86AudioRaiseVolume
@@ -13,24 +12,3 @@
 
 "amixer -q set Master toggle"
   XF86AudioMute
-
-"xdotool mousemove_relative 0 -15"
-  Mod4 + Super_L + Alt + k
-
-"xdotool mousemove_relative 0 15"
-  Mod4 + Super_L + Alt + j
-
-"xdotool mousemove_relative -- -15 0"
-  Mod4 + Super_L + Alt + h
-
-"xdotool mousemove_relative 15 0"
-  Mod4 + Super_L + Alt + l
-
-"xdotool click 1"
-  Mod4 + Super_L + Alt + n
-
-"xdotool click 2"
-  Mod4 + Super_L + Alt + m
-
-
-

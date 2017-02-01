@@ -30,6 +30,7 @@ xset r rate 250 40
 xset -dpms 
 
 # Autolock
-exec xautolock -time 15 -locker "i3lock -c 395c69 -i ~/images/lockscreen.png" &
+exec xautolock -time 1 -locker "i3lock -c 395c69 -i ~/images/lockscreen.png" &
 
 git config --global core.excludesfile '$HOME/.gitignore'
+
