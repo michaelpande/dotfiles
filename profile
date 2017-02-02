@@ -18,6 +18,7 @@ fi
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$HOME/dev/toolbelt:$HOME/tools/dev:$PATH"
+./dev/toolbelt/auto_detect_screen &
 xmodmap ~/.Xmodmap
 xbindkeys
 workrave &
