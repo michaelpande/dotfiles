@@ -17,12 +17,10 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$HOME/dev/toolbelt:$HOME/tools/dev:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$HOME/dev/toolbelt:$HOME/dev/cli_radiotray_controller:$HOME/tools/dev:$PATH"
 ./dev/toolbelt/auto_detect_screen &
 xmodmap ~/.Xmodmap
 xbindkeys
-workrave &
-nohup radiotray > /dev/null &
 
 # Key repeat
 xset r rate 250 40 
@@ -31,7 +29,7 @@ xset r rate 250 40
 xset -dpms 
 
 # Autolock
-exec xautolock -time 1 -locker "i3lock -c 395c69 -i ~/images/lockscreen.png" &
+exec xautolock -time 5 -locker "i3lock -c 395c69 -i ~/images/lockscreen.png" &
 
 git config --global core.excludesfile '$HOME/.gitignore'
 

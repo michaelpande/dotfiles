@@ -14,6 +14,7 @@ rm -rf ~/.config/redshift.conf
 rm -rf ~/.xbindkeysrc
 rm -rf ~/.profile
 rm -rf ~/.gitconfig
+rm -rf ~/.radio_stations
 
 # Make necessary folders
 mkdir ~/.i3
@@ -34,6 +35,7 @@ ln -s ~/dotfiles/etc/redshift.conf ~/.config/redshift.conf
 ln -s ~/dotfiles/xbindkeysrc ~/.xbindkeysrc
 ln -s ~/dotfiles/profile ~/.profile
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/dotfiles/etc/radio_stations ~/.radio_stations
 
 # Vim setup
 rm -rf ~/.vim
