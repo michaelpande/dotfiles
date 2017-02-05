@@ -35,5 +35,5 @@ setopt HIST_IGNORE_ALL_DUPS
 # Global gitignore
 git config --global core.excludesfile '~/.gitignore'
 
-
+xmodmap ~/.Xmodmap
 

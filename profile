@@ -19,8 +19,8 @@ fi
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$HOME/dev/toolbelt:$HOME/dev/cli_radiotray_controller:$HOME/tools/dev:$PATH"
 ./dev/toolbelt/auto_detect_screen &
-xmodmap ~/.Xmodmap
 xbindkeys
+xmodmap $HOME/.Xmodmap
 
 # Key repeat
 xset r rate 250 40 
