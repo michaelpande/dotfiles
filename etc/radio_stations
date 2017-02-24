@@ -4,3 +4,5 @@ classical http://yp.shoutcast.com/sbin/tunein-station.pls?id=11717
 dubstep http://yp.shoutcast.com/sbin/tunein-station.pls?id=1191311
 chiptunes http://chiptune.rainwave.cc/tune_in/4.mp3
 ocremixes http://ocr.rainwave.cc/tune_in/2.mp3
+trance https://www.internet-radio.com/servers/tools/playlistgenerator/?u=http://94.23.209.225:8000/listen.pls&t=.m3u
+downtempo https://www.internet-radio.com/servers/tools/playlistgenerator/?u=http://209.9.229.216:80/listen.pls&t=.m3u
