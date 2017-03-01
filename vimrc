@@ -18,6 +18,8 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'ciaranm/detectindent'
 Bundle 'easymotion/vim-easymotion'
 Bundle 'kabbamine/zeavim.vim'
+Bundle 'chaquotay/ftl-vim-syntax'
+Bundle 'valloric/youcompleteme'
 
 call vundle#end()            
 filetype plugin indent on    
