@@ -5,5 +5,5 @@ keycode 121 = XF86AudioMute
 keycode 122 = XF86AudioLowerVolume
 keycode 123 = XF86AudioRaiseVolume
 
-keycode 49 = BackSpace
+keycode 9 = BackSpace
 

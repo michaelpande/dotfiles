@@ -23,7 +23,7 @@ xbindkeys
 xmodmap $HOME/.Xmodmap
 
 # Key repeat
-xset r rate 250 40 
+xset r rate 200 60 
 
 # Turn off power saving (Dark screen)
 xset -dpms 
