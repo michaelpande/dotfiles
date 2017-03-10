@@ -1,6 +1,9 @@
 "i3lock -c 395c69 -i ~/images/lockscreen.png"
   Pause
 
+"i3lock -c 395c69 -i ~/images/lockscreen.png"
+  End
+
 "amixer -q set Master 5dB+ unmute"
   XF86AudioRaiseVolume
 
