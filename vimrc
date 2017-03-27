@@ -29,11 +29,11 @@ syntax on
 
 colorscheme jellybeans
 
+set number
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set encoding=utf-8
-set relativenumber
 set cursorline
 set cursorcolumn
 set clipboard=unnamedplus

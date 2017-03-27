@@ -16,6 +16,9 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+if [ -f "$HOME/.google-cloud-sdk"]; then
+    . "$HOME/.google-cloud-sdk"
+fi
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$HOME/dev/toolbelt:$HOME/dev/cli_radiotray_controller:$HOME/tools/dev:$PATH"
 ./dev/toolbelt/auto_detect_screen &
@@ -32,4 +35,3 @@ xset -dpms
 exec xautolock -time 5 -locker "i3lock -c 395c69 -i ~/images/lockscreen.png" &
 
 git config --global core.excludesfile '$HOME/.gitignore'
-

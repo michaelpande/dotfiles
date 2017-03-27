@@ -39,3 +39,4 @@ git config --global core.excludesfile '~/.gitignore'
 
 xmodmap ~/.Xmodmap
 
+export UNICORN_TIMEOUT=30000
