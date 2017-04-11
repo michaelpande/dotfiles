@@ -40,3 +40,7 @@ git config --global core.excludesfile '~/.gitignore'
 xmodmap ~/.Xmodmap
 
 export UNICORN_TIMEOUT=30000
+
+# Go
+export GOPATH=$HOME/dev/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
