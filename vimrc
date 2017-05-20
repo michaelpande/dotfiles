@@ -22,6 +22,7 @@ Bundle 'kabbamine/zeavim.vim'
 Bundle 'chaquotay/ftl-vim-syntax'
 Bundle 'FredKSchott/CoVim'
 Bundle 'fatih/vim-go'
+Bundle 'hdima/python-syntax'
 
 call vundle#end()            
 filetype plugin indent on    
@@ -42,13 +43,15 @@ set clipboard=unnamedplus
 set virtualedit=onemore
 set nobackup
 set nowritebackup
+set clipboard=unnamedplus
+set nowrap
 highlight CursorLine ctermbg=236 ctermfg=white
 highlight CursorColumn ctermbg=235
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/node_modules,*/tmp
-
+let python_highlighting_all = 1
 let mapleader = ","
 nmap <leader>n :NERDTreeToggle<cr>
 nmap <S-Enter> O<Esc>
@@ -74,6 +77,16 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
+" Python development
 
+vmap <leader>y :w! /tmp/vitmp<CR>                                                                   
+nmap <leader>p :r! cat /tmp/vitmp<CR>
 
 set paste
+
+" Python specific
+autocmd BufWritePost *.py !python3 test.py
+
+" Go specific 
+autocmd BufWritePost *.go !go test
+autocmd BufWritePost *.go !make

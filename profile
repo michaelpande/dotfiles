@@ -16,11 +16,12 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-if [ -f "$HOME/.google-cloud-sdk"]; then
-    . "$HOME/.google-cloud-sdk"
-fi
+
+# Add dev tools
+source "$HOME/tools/init.bash"
+
 # set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$HOME/dev/toolbelt:$HOME/dev/cli_radiotray_controller:$HOME/tools/dev:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$HOME/dev/toolbelt:$HOME/dev/cli_radiotray_controller:$HOME/dev/nirvana/linux:$PATH"
 ./dev/toolbelt/auto_detect_screen &
 xbindkeys
 xmodmap $HOME/.Xmodmap

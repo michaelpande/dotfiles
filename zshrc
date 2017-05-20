@@ -16,6 +16,8 @@ antigen bundle zsh-users/zsh-autosuggestions
 
 antigen apply
 
+source "$HOME/tools/init.zsh"
+
 
 # Alias
 alias v='vim'
