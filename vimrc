@@ -85,7 +85,7 @@ nmap <leader>p :r! cat /tmp/vitmp<CR>
 set paste
 
 " Python specific
-autocmd BufWritePost *.py !python3 test.py
+" autocmd BufWritePost *.py !python3 test.py
 
 " Go specific 
 autocmd BufWritePost *.go !go test

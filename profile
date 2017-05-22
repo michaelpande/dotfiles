@@ -24,7 +24,6 @@ source "$HOME/tools/init.bash"
 PATH="$HOME/bin:$HOME/.local/bin:$HOME/dev/toolbelt:$HOME/dev/cli_radiotray_controller:$HOME/dev/nirvana/linux:$PATH"
 ./dev/toolbelt/auto_detect_screen &
 xbindkeys
-xmodmap $HOME/.Xmodmap
 
 # Key repeat
 xset r rate 200 60 

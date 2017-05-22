@@ -173,3 +173,5 @@ hide_edge_borders both
 
 #Network Manager
 exec --no-startup-id nm-applet
+
+exec setxkbmap -option caps:swapescape
