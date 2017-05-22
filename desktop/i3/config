@@ -175,3 +175,6 @@ hide_edge_borders both
 exec --no-startup-id nm-applet
 
 exec setxkbmap -option caps:swapescape
+
+exec --no-startup-id compton --config ~/dotfiles/desktop/compton/compton.conf -b
+exec nitrogen --restore
