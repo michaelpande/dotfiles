@@ -34,17 +34,29 @@ colorscheme jellybeans
 
 set number
 set tabstop=2
-set shiftwidth=2
 set expandtab
 set encoding=utf-8
 set cursorline
 set cursorcolumn
-set clipboard=unnamedplus
+set clipboard+=unnamed,unnamedplus " use the system clipboard for yank/put/delete
 set virtualedit=onemore
 set nobackup
 set nowritebackup
-set clipboard=unnamedplus
-set nowrap
+set nowrap 											" Avoid wrapping text when too wide
+set virtualedit=all 						" Keeps cursor in same horizontal position when scrolling
+
+set nobackup nowritebackup noswapfile autoread            " no backup or swap
+nnoremap <BS> X " Make backspace delete character in every mode
+
+
+
+" Highlight horizontal width over 80 characters
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
+
+" >80 char width
+let &colorcolumn=join(range(81,999),",")
+
 highlight CursorLine ctermbg=236 ctermfg=white
 highlight CursorColumn ctermbg=235
 
