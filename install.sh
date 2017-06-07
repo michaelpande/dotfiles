@@ -47,3 +47,6 @@ vim +PluginInstall +qall
 # Set up gitignore
 cat ~/dotfiles/git/gitignore/* > ~/.gitignore
 
+
+# Ubuntu
+apt-get install vim-gtk

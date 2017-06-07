@@ -1,5 +1,4 @@
 set nocompatible
-
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -23,42 +22,29 @@ Bundle 'chaquotay/ftl-vim-syntax'
 Bundle 'FredKSchott/CoVim'
 Bundle 'fatih/vim-go'
 Bundle 'hdima/python-syntax'
+Bundle 'mmozuras/vim-whitespace'
+Bundle 'nathanaelkane/vim-indent-guides'
 
-call vundle#end()            
-filetype plugin indent on    
-
+call vundle#end()
+filetype plugin indent on
 set laststatus=2
+colorscheme jellybeans
 syntax on
 
-colorscheme jellybeans
-
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_start_level=2
 set number
 set tabstop=2
 set expandtab
 set encoding=utf-8
-set cursorline
-set cursorcolumn
-set clipboard+=unnamed,unnamedplus " use the system clipboard for yank/put/delete
-set virtualedit=onemore
-set nobackup
-set nowritebackup
 set nowrap 											" Avoid wrapping text when too wide
 set virtualedit=all 						" Keeps cursor in same horizontal position when scrolling
-
 set nobackup nowritebackup noswapfile autoread            " no backup or swap
 nnoremap <BS> X " Make backspace delete character in every mode
 
-
-
-" Highlight horizontal width over 80 characters
-"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%81v.\+/
-
 " >80 char width
 let &colorcolumn=join(range(81,999),",")
-
-highlight CursorLine ctermbg=236 ctermfg=white
-highlight CursorColumn ctermbg=235
+highlight ColorColumn ctermbg=234
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -74,31 +60,32 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
-" <Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
 
 " s{char}{char} to move to {char}{char}
 nmap s <Plug>(easymotion-overwin-f2)
 
-" Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
-
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
-
 " Python development
-
-vmap <leader>y :w! /tmp/vitmp<CR>                                                                   
+vmap <leader>y :w! /tmp/vitmp<CR>
 nmap <leader>p :r! cat /tmp/vitmp<CR>
 
+
+" System Clipboard Copy Paste With CTRL + X, C, V
 set paste
+" set clipboard+=unnamed,unnamedplus " use the system clipboard
+vmap <C-c> "+y
+vmap <C-x> "+d
+map <C-v> "+p
+
 
 " Python specific
 " autocmd BufWritePost *.py !python3 test.py
 
-" Go specific 
+" Go: Test and run on each save
 autocmd BufWritePost *.go !go test
 autocmd BufWritePost *.go !make
+
+" Indent Guides Color
+let g:indent_guides_auto_colors=0
+let g:indent_guides_start_level=1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=235
