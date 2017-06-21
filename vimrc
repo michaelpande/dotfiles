@@ -1,4 +1,5 @@
-set nocompatible
+set nocompatible  " be iMproved
+set hidden
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -24,12 +25,22 @@ Bundle 'fatih/vim-go'
 Bundle 'hdima/python-syntax'
 Bundle 'mmozuras/vim-whitespace'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'mhinz/vim-startify'
+Bundle 'mru.vim'
+Bundle 'farmergreg/vim-lastplace'
+Bundle 'ericbn/vim-relativize'
+Bundle 'jamshedvesuna/vim-markdown-preview'
+Bundle 'valloric/youcompleteme'
+Bundle 'ternjs/tern_for_vim'
+Bundle 'scrooloose/syntastic'
 
 call vundle#end()
 filetype plugin indent on
 set laststatus=2
 colorscheme jellybeans
 syntax on
+
+set showtabline=0
 
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_start_level=2
@@ -60,14 +71,15 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
-
-" s{char}{char} to move to {char}{char}
-nmap s <Plug>(easymotion-overwin-f2)
+" Stupid easymotion
+nmap f <Plug>(easymotion-bd-w)
 
 " Python development
 vmap <leader>y :w! /tmp/vitmp<CR>
 nmap <leader>p :r! cat /tmp/vitmp<CR>
 
+" Most Recently Used
+nmap ø :MRU<CR>
 
 " System Clipboard Copy Paste With CTRL + X, C, V
 set paste
@@ -84,8 +96,27 @@ map <C-v> "+p
 autocmd BufWritePost *.go !go test
 autocmd BufWritePost *.go !make
 
+" Startify
+let g:startify_custom_header = ['']
+let g:startify_list_order = ['dir', 'bookmarks']
+let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'z': '~/.zshrc'}, {'t': '~/dev/toolbelt'}]
+
 " Indent Guides Color
 let g:indent_guides_auto_colors=0
 let g:indent_guides_start_level=1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=235
+
+" Markdown preview
+let vim_markdown_preview_hotkey='<C-m>'
+
+" Syntax checking hacks for vim
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_loc_list_height=5

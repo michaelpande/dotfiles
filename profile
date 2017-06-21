@@ -26,10 +26,13 @@ PATH="$HOME/bin:$HOME/.local/bin:$HOME/dev/toolbelt:$HOME/dev/cli_radiotray_cont
 xbindkeys
 
 # Key repeat
-xset r rate 200 60 
+xset r rate 200 60
 
 # Turn off power saving (Dark screen)
-xset -dpms 
+xset -dpms
+
+# Swap caps and escape
+exec setxkbmap -option caps:swapescape
 
 # Autolock
 exec xautolock -time 5 -locker "i3lock -c 395c69 -i ~/images/lockscreen.png" &

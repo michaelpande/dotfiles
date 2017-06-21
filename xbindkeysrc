@@ -10,7 +10,7 @@
 "amixer -q set Master 5dB- unmute"
   XF86AudioLowerVolume
 
-"amixer -q set Master toggle"
+"amixer -D pulse set Master 1+ toggle"
   XF86AudioMute
 
 
