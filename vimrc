@@ -1,7 +1,11 @@
-set nocompatible  " be iMproved
-set hidden
-filetype off
-
+"
+" ██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗
+" ██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝
+" ██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║███████╗
+" ██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║
+" ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║
+" ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
+"
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -16,7 +20,6 @@ Bundle 'chrisbra/colorizer'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'gabesoft/vim-ags'
 Bundle 'nanotech/jellybeans.vim'
-Bundle 'ciaranm/detectindent'
 Bundle 'easymotion/vim-easymotion'
 Bundle 'kabbamine/zeavim.vim'
 Bundle 'chaquotay/ftl-vim-syntax'
@@ -33,90 +36,158 @@ Bundle 'jamshedvesuna/vim-markdown-preview'
 Bundle 'valloric/youcompleteme'
 Bundle 'ternjs/tern_for_vim'
 Bundle 'scrooloose/syntastic'
-
+Bundle 'djoshea/vim-autoread'
+Bundle 'conormcd/matchindent.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Bundle 'arcticicestudio/nord-vim'
+Bundle 'timakro/vim-searchant'
+Bundle 'obxhdx/vim-auto-highlight'
 call vundle#end()
 filetype plugin indent on
-set laststatus=2
-colorscheme jellybeans
-syntax on
 
-set showtabline=0
+"
+"  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗
+" ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝
+" ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+" ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+" ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+"  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
+"
 
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_start_level=2
+set nocompatible  " be iMproved
+set hidden
+filetype off
+
 set number
-set tabstop=2
-set expandtab
 set encoding=utf-8
 set nowrap 											" Avoid wrapping text when too wide
 set virtualedit=all 						" Keeps cursor in same horizontal position when scrolling
 set nobackup nowritebackup noswapfile autoread            " no backup or swap
-nnoremap <BS> X " Make backspace delete character in every mode
 
-" >80 char width
-let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=234
+set paste
+" set clipboard+=unnamed,unnamedplus " use the system clipboard
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+" INDENT/TAB/SPACES
+set tabstop=2
+set softtabstop=2
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/node_modules,*/tmp
-let python_highlighting_all = 1
+
+
+"
+" ██╗  ██╗███████╗██╗   ██╗███████╗
+" ██║ ██╔╝██╔════╝╚██╗ ██╔╝██╔════╝
+" █████╔╝ █████╗   ╚████╔╝ ███████╗
+" ██╔═██╗ ██╔══╝    ╚██╔╝  ╚════██║
+" ██║  ██╗███████╗   ██║   ███████║
+" ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝
+"
+
+" Most Recently Used
+    nmap ø :MRU<CR>
+
+" Standard hotkeys for vim
+    vmap <C-c> "+y
+    vmap <C-x> "+d
+    map <C-v> "+p
+    map <C-f> /
+    nnoremap <BS> X " Make backspace delete character in every mode
+
+" Markdown preview
+    let vim_markdown_preview_hotkey='<C-m>'
+
+" Easy easymotion
+    nmap f <Plug>(easymotion-bd-w)
+
 let mapleader = ","
 nmap <leader>n :NERDTreeToggle<cr>
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
-
-" Stupid easymotion
-nmap f <Plug>(easymotion-bd-w)
-
-" Python development
-vmap <leader>y :w! /tmp/vitmp<CR>
-nmap <leader>p :r! cat /tmp/vitmp<CR>
-
-" Most Recently Used
-nmap ø :MRU<CR>
-
-" System Clipboard Copy Paste With CTRL + X, C, V
-set paste
-" set clipboard+=unnamed,unnamedplus " use the system clipboard
-vmap <C-c> "+y
-vmap <C-x> "+d
-map <C-v> "+p
+" CTRLP
+    let g:ctrlp_prompt_mappings = {
+        \ 'AcceptSelection("e")': ['<c-t>'],
+        \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+        \ }
 
 
-" Python specific
-" autocmd BufWritePost *.py !python3 test.py
+"
+" ███████╗████████╗██╗   ██╗██╗     ███████╗
+" ██╔════╝╚══██╔══╝╚██╗ ██╔╝██║     ██╔════╝
+" ███████╗   ██║    ╚████╔╝ ██║     █████╗
+" ╚════██║   ██║     ╚██╔╝  ██║     ██╔══╝
+" ███████║   ██║      ██║   ███████╗███████╗
+" ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝
+"
 
-" Go: Test and run on each save
-autocmd BufWritePost *.go !go test
-autocmd BufWritePost *.go !make
 
-" Startify
-let g:startify_custom_header = ['']
-let g:startify_list_order = ['dir', 'bookmarks']
-let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'z': '~/.zshrc'}, {'t': '~/dev/toolbelt'}]
+set laststatus=2
+colorscheme jellybeans
+syntax on
+
+" >80 char width
+    let &colorcolumn=join(range(81,999),",")
+    highlight ColorColumn ctermbg=234
 
 " Indent Guides Color
-let g:indent_guides_auto_colors=0
-let g:indent_guides_start_level=1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=234
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=235
+    let g:indent_guides_auto_colors=0
+    let g:indent_guides_start_level=1
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=234
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=235
 
-" Markdown preview
-let vim_markdown_preview_hotkey='<C-m>'
 
-" Syntax checking hacks for vim
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_loc_list_height=5
+
+"
+" ███╗   ███╗██╗███████╗ ██████╗
+" ████╗ ████║██║██╔════╝██╔════╝
+" ██╔████╔██║██║███████╗██║
+" ██║╚██╔╝██║██║╚════██║██║
+" ██║ ╚═╝ ██║██║███████║╚██████╗
+" ╚═╝     ╚═╝╚═╝╚══════╝ ╚═════╝
+"
+
+
+" DEVELOPMENT: PYTHON
+    vmap <leader>y :w! /tmp/vitmp<CR>
+    nmap <leader>p :r! cat /tmp/vitmp<CR>
+    "autocmd BufWritePost *.py !python3 test.py
+    let python_highlighting_all = 1
+
+" DEVELOPMENT: Go - Test and run on each save
+    autocmd BufWritePost *.go !go test
+    autocmd BufWritePost *.go !make
+
+" Airline
+    let g:airline#extensions#tabline#fnamemod = ':.'
+    let g:airline#extensions#tabline#fnamecollapse = 0
+    let g:airline_section_z = '%f'
+    let g:airline_section_y = ''
+
+" INDENTGUIDES
+    let g:indent_guides_enable_on_vim_startup=1
+    let g:indent_guides_start_level=2
+
+" CTRLP
+    set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+
+
+
+" Startify
+    let g:startify_custom_header = ['']
+    let g:startify_list_order = ['dir', 'bookmarks']
+    let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'z': '~/.zshrc'}, {'t': '~/dev/toolbelt'}]
+
+
+
+" Syntastic - Syntax checking hacks for vim
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 0
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+    let g:syntastic_loc_list_height=5
