@@ -15,10 +15,12 @@ rm -rf ~/.xbindkeysrc
 rm -rf ~/.profile
 rm -rf ~/.gitconfig
 rm -rf ~/.radio_stations
+rm -rf ~/.dotfiles_dependencies
 
 # Make necessary folders
 mkdir ~/.i3
 mkdir ~/.antigen
+mkdir ~/.dotfiles_dependencies
 
 curl https://cdn.rawgit.com/zsh-users/antigen/v1.3.4/bin/antigen.zsh > ~/.antigen/antigen.zsh
 
@@ -31,7 +33,7 @@ ln -s ~/dotfiles/desktop/i3/config ~/.i3/config
 ln -s ~/dotfiles/desktop/i3/i3status.conf ~/.i3status.conf
 ln -s ~/dotfiles/etc/bookmarks.xml ~/.local/share/radiotray/bookmarks.xml
 ln -s ~/dotfiles/etc/workrave/state ~/.workrave/state
-ln -s ~/dotfiles/etc/redshift.conf ~/.config/redshift.conf 
+ln -s ~/dotfiles/etc/redshift.conf ~/.config/redshift.conf
 ln -s ~/dotfiles/xbindkeysrc ~/.xbindkeysrc
 ln -s ~/dotfiles/profile ~/.profile
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
@@ -50,3 +52,7 @@ cat ~/dotfiles/git/gitignore/* > ~/.gitignore
 
 # Ubuntu
 apt-get install vim-gtk
+
+# Install dependencies
+cd ~/.dotfiles_dependencies
+git clone git@github.com:calzoneman/i3-weather.git

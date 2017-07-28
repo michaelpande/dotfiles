@@ -40,9 +40,9 @@ Bundle 'djoshea/vim-autoread'
 Bundle 'conormcd/matchindent.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
-Bundle 'arcticicestudio/nord-vim'
 Bundle 'timakro/vim-searchant'
 Bundle 'obxhdx/vim-auto-highlight'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -58,7 +58,8 @@ filetype plugin indent on
 set nocompatible  " be iMproved
 set hidden
 filetype off
-
+set ttyfast
+set lazyredraw
 set number
 set encoding=utf-8
 set nowrap 											" Avoid wrapping text when too wide
