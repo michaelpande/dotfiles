@@ -54,5 +54,10 @@ cat ~/dotfiles/git/gitignore/* > ~/.gitignore
 apt-get install vim-gtk
 
 # Install dependencies
+apt-get install python3
+apt-get install python3-pip
+pip install requests BeautifulSoup4
+
+
 cd ~/.dotfiles_dependencies
 git clone git@github.com:calzoneman/i3-weather.git

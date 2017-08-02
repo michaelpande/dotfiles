@@ -42,6 +42,9 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'timakro/vim-searchant'
 Bundle 'obxhdx/vim-auto-highlight'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tommcdo/vim-fugitive-blame-ext'
+Bundle 'ntpeters/vim-airline-colornum'
 
 call vundle#end()
 filetype plugin indent on
@@ -55,16 +58,19 @@ filetype plugin indent on
 "  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
 "
 
+set ttyfast
+set lazyredraw
+
+
 set nocompatible  " be iMproved
 set hidden
 filetype off
-set ttyfast
-set lazyredraw
 set number
 set encoding=utf-8
 set nowrap 											" Avoid wrapping text when too wide
 set virtualedit=all 						" Keeps cursor in same horizontal position when scrolling
 set nobackup nowritebackup noswapfile autoread            " no backup or swap
+set cursorline
 
 set paste
 " set clipboard+=unnamed,unnamedplus " use the system clipboard
@@ -75,6 +81,8 @@ set softtabstop=2
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/node_modules,*/tmp
 
+set listchars=trail:█
+set list!
 
 "
 " ██╗  ██╗███████╗██╗   ██╗███████╗
@@ -99,7 +107,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/node_
     let vim_markdown_preview_hotkey='<C-m>'
 
 " Easy easymotion
-    nmap f <Plug>(easymotion-bd-w)
+    nmap f <Plug>(easymotion-overwin-w)
 
 let mapleader = ","
 nmap <leader>n :NERDTreeToggle<cr>
@@ -122,20 +130,19 @@ nmap <CR> o<Esc>
 " ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝
 "
 
-
 set laststatus=2
+
+syntax enable
 colorscheme jellybeans
-syntax on
 
 " >80 char width
-    let &colorcolumn=join(range(81,999),",")
-    highlight ColorColumn ctermbg=234
-
+"    let &colorcolumn=join(range(81,999),",")
+"    highlight ColorColumn ctermbg=234
 " Indent Guides Color
-    let g:indent_guides_auto_colors=0
-    let g:indent_guides_start_level=1
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=234
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=235
+"    let g:indent_guides_auto_colors=0
+"    let g:indent_guides_start_level=1
+"    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=234
+"    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=235
 
 
 
@@ -165,6 +172,8 @@ syntax on
     let g:airline#extensions#tabline#fnamecollapse = 0
     let g:airline_section_z = '%f'
     let g:airline_section_y = ''
+    let g:airline_detect_paste=0
+    let g:airline_theme = 'jellybeans'
 
 " INDENTGUIDES
     let g:indent_guides_enable_on_vim_startup=1
@@ -179,7 +188,7 @@ syntax on
 " Startify
     let g:startify_custom_header = ['']
     let g:startify_list_order = ['dir', 'bookmarks']
-    let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'z': '~/.zshrc'}, {'t': '~/dev/toolbelt'}]
+    let g:startify_bookmarks = [{'v': '~/dotfiles/vimrc'}, {'z': '~/dotfiles/zshrc'}, {'t': '~/dev/toolbelt'}]
 
 
 
@@ -192,3 +201,4 @@ syntax on
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
     let g:syntastic_loc_list_height=5
+
