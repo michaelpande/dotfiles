@@ -10,7 +10,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Bundle 'VundleVim/Vundle.vim'
-Bundle 'kien/ctrlp.vim'
+Bundle 'felikz/ctrlp-py-matcher'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
@@ -35,16 +35,15 @@ Bundle 'ericbn/vim-relativize'
 Bundle 'jamshedvesuna/vim-markdown-preview'
 Bundle 'valloric/youcompleteme'
 Bundle 'ternjs/tern_for_vim'
-Bundle 'scrooloose/syntastic'
+Bundle 'vim-syntastic/syntastic'
 Bundle 'djoshea/vim-autoread'
-Bundle 'conormcd/matchindent.vim'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'timakro/vim-searchant'
 Bundle 'obxhdx/vim-auto-highlight'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tommcdo/vim-fugitive-blame-ext'
 Bundle 'ntpeters/vim-airline-colornum'
+Bundle 'mtscout6/syntastic-local-eslint.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -67,22 +66,23 @@ set hidden
 filetype off
 set number
 set encoding=utf-8
-set nowrap 											" Avoid wrapping text when too wide
-set virtualedit=all 						" Keeps cursor in same horizontal position when scrolling
+set nowrap                                          " Avoid wrapping text when too wide
+set virtualedit=all" Keeps cursor in same horizontal position when scrolling
 set nobackup nowritebackup noswapfile autoread            " no backup or swap
 set cursorline
+
+set listchars=tab:▸\ ,trail:~
+set list
 
 set paste
 " set clipboard+=unnamed,unnamedplus " use the system clipboard
 
 " INDENT/TAB/SPACES
-set tabstop=2
+set expandtab
+set shiftwidth=2
 set softtabstop=2
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/node_modules,*/tmp
-
-set listchars=trail:█
-set list!
 
 "
 " ██╗  ██╗███████╗██╗   ██╗███████╗
@@ -193,12 +193,13 @@ colorscheme jellybeans
 
 
 " Syntastic - Syntax checking hacks for vim
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 0
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
-    let g:syntastic_loc_list_height=5
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_loc_list_height=5
+let g:syntastic_javascript_checkers = ['eslint']

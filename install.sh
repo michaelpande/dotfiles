@@ -4,6 +4,7 @@
 rm -f ~/.vimrc
 rm -f ~/.Xmodmap
 rm -f ~/.gitignore
+rm -f ~/.eslintrc
 rm -rf ~/.i3
 rm -f ~/.i3status.conf
 rm -f ~/.zshrc
@@ -27,6 +28,7 @@ curl https://cdn.rawgit.com/zsh-users/antigen/v1.3.4/bin/antigen.zsh > ~/.antige
 
 # Symlink
 ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/eslintrc ~/.eslintrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/Xmodmap ~/.Xmodmap
 ln -s ~/dotfiles/desktop/i3/config ~/.i3/config

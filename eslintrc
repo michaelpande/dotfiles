@@ -1,23 +1,29 @@
 {
-	"env": {
-    	"browser": true,
-    	"es6": true,
-    	"node": true
-	},
+  "extends" : "airbnb-base",
+  "globals": {
+    "document": true,
+    "window": true,
+    "console": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
 
-	"rules": {
-		"quotes": [1, "single", "avoid-escape"],
-		"no-param-reassign": ["error", { props: true }],
-		"no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
-		"eqeqeq": ["error", "always"],
-		"spaced-comment": ["error", "always"],
-		"semi": ["error", "always"],
-		"id-length": ["warn", {"min": 4}],
-		"no-console": ["warn", { allow: ["warn, "error"]}],
-		"no-array-constructor": "error",
-		"no-new-object": "error",
-		"dot-notationm": "error",
-		"eol-last": ["error", "always"],
-		"max-len": ["warn", 100]
-	}
+  "rules": {
+    "indent": ["warn", 2],
+    "quotes": [1, "single", "avoid-escape"],
+    "no-param-reassign": ["error", { props: true }],
+    "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
+    "eqeqeq": ["error", "always"],
+    "spaced-comment": ["error", "always"],
+    "semi": ["error", "always"],
+    "id-length": ["warn", {"min": 2}],
+    "no-array-constructor": "error",
+    "no-new-object": "error",
+    "dot-notation": "error",
+    "eol-last": ["error", "always"],
+    "max-len": ["warn", 120]
+  }
 }

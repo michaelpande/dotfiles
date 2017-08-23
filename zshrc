@@ -1,5 +1,5 @@
 # Load Antigen
-source ~/.antigen/antigen.zsh 
+source ~/.antigen/antigen.zsh
 
 # Load various lib files
 antigen bundle robbyrussell/oh-my-zsh lib/
@@ -24,16 +24,14 @@ alias v='vim'
 alias dcc='docker-compose'
 alias dcu='docker-compose up -d'
 alias dcl='docker-compose logs'
-alias please='sudo'
-alias octave='octave --no-gui'  
-alias ':q'='exit'
+alias octave='octave --no-gui'
 
 function f(){
 	 firefox $1 &
  }
 
- 
-# Options 
+
+# Options
 setopt HIST_IGNORE_ALL_DUPS
 
 # Global gitignore
@@ -44,3 +42,5 @@ export UNICORN_TIMEOUT=30000
 # Go
 export GOPATH=$HOME/dev/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+export PATH=$PATH:$HOME/bin
