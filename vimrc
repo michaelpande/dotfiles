@@ -44,6 +44,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tommcdo/vim-fugitive-blame-ext'
 Bundle 'ntpeters/vim-airline-colornum'
 Bundle 'mtscout6/syntastic-local-eslint.vim'
+Bundle 'csexton/trailertrash.vim'
+Bundle 'isRuslan/vim-es6'
+Bundle 'merlinrebrovic/focus.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -71,7 +74,7 @@ set virtualedit=all" Keeps cursor in same horizontal position when scrolling
 set nobackup nowritebackup noswapfile autoread            " no backup or swap
 set cursorline
 
-set listchars=tab:▸\ ,trail:~
+set listchars=tab:▸\
 set list
 
 set paste

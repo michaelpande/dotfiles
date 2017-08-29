@@ -38,3 +38,5 @@ git config --global core.excludesfile '$HOME/.gitignore'
 
 setxkbmap -option caps:swapescape
 
+
+export PATH="$HOME/.cargo/bin:$PATH"
