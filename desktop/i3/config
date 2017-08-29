@@ -179,4 +179,3 @@ exec setxkbmap -option caps:swapescape
 exec --no-startup-id compton --config ~/dotfiles/desktop/compton/compton.conf -b
 exec nitrogen --restore
 
-for_window [instance="guake"] floating enable
