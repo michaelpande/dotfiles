@@ -40,3 +40,4 @@ setxkbmap -option caps:swapescape
 
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=~/.npm-global/bin:$PATH
